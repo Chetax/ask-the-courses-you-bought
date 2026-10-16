@@ -2,7 +2,7 @@
 
 **Turn the courses you bought into a private AI you can ask anything. It answers only from your course material, shows exactly which course and lesson each answer came from, and runs fully offline on your own computer.**
 
-> 🚧 **Status:** Phase 1 in progress. Follow along or ⭐ the repo to see it come together.
+> **Status:** Phase 1 in progress. Follow along or star the repo to see it come together.
 
 ---
 
@@ -24,12 +24,12 @@ A local AI "brain" built only from your own course library:
 
 | What you get | Why it matters |
 |---|---|
-| 🎯 **Answers only from your courses** | No internet knowledge mixed in, so you get what *your* teachers taught |
-| 📌 **Course and lesson citations** | Every point shows where it came from, so you can verify it yourself |
-| 🚫 **"The courses don't cover this"** | Honest when the answer isn't in your material, instead of a made-up one |
-| 🔀 **Cross-course answers** | Pulls from every relevant course and shows where they **agree** and **disagree** |
-| 🔒 **100% offline** | Runs on your computer. Your paid content never goes to the cloud |
-| ➕ **Works with any platform** | Drop in transcripts from any course and re-index |
+| **Answers only from your courses** | No internet knowledge mixed in, so you get what *your* teachers taught |
+| **Course and lesson citations** | Every point shows where it came from, so you can verify it yourself |
+| **"The courses don't cover this"** | Honest when the answer isn't in your material, instead of a made-up one |
+| **Cross-course answers** | Pulls from every relevant course and shows where they **agree** and **disagree** |
+| **100% offline** | Runs on your computer. Your paid content never goes to the cloud |
+| **Works with any platform** | Drop in transcripts from any course and re-index |
 
 ### Example
 
@@ -37,11 +37,11 @@ A local AI "brain" built only from your own course library:
 You:  How do I write a good headline?
 
 AI:   Across 3 courses, the main ideas are:
-      • Speak to one specific reader, not everyone
-        → Scientific Advertising · Lesson 5: Headlines
-      • Lead with a concrete benefit or a number
-        → [Course B] · Lesson 2
-      ⚖️ Where they disagree: [Course A] favours long, detailed headlines,
+      - Speak to one specific reader, not everyone
+        Source: Scientific Advertising, Lesson 5: Headlines
+      - Lead with a concrete benefit or a number
+        Source: [Course B], Lesson 2
+      Where they disagree: [Course A] favours long, detailed headlines,
         while [Course C] argues for short ones.
 ```
 
@@ -75,7 +75,7 @@ flowchart LR
 
 | Layer | Tool |
 |---|---|
-| Local LLM | [Ollama](https://ollama.com) (Qwen 2.5 / Llama 3.1, 7–8B) |
+| Local LLM | [Ollama](https://ollama.com) (Qwen 2.5 / Llama 3.1, 7-8B) |
 | Embeddings | `bge-m3` / `nomic-embed-text` |
 | Vector DB | ChromaDB (local, no server) |
 | Keyword search | BM25 (`rank_bm25`) |
@@ -108,7 +108,7 @@ So anyone can try it without uploading their own courses, the repo includes a **
 }
 ```
 
-> ⚠️ No paid or copyrighted course content is included in this repo. To use your own courses, add your own transcripts locally (see `scripts/add_course.py`).
+> **Note:** No paid or copyrighted course content is included in this repo. To use your own courses, add your own transcripts locally (see `scripts/add_course.py`).
 
 ---
 
@@ -147,7 +147,7 @@ Ideas to explore once the core system is solid:
 
 - **Better grounding:** claim-level citation checking, so every sentence is verified against its source passage
 - **Smarter retrieval:** compare chunking strategies (semantic, lesson-aware, hierarchical) and query rewriting
-- **Knowledge graph layer:** link concepts across courses (e.g., "hook" ↔ "headline" ↔ "attention") for richer cross-course answers
+- **Knowledge graph layer:** link concepts across courses (e.g., "hook", "headline", and "attention") for richer cross-course answers
 - **Contradiction detection:** automatically surface where teachers disagree, not only when asked
 - **Video and audio ingestion:** transcribe courses directly with local Whisper and jump to the exact timestamp
 - **Evaluation framework:** automated faithfulness and relevance scoring (RAGAS-style) to track every change
